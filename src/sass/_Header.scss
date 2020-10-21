@@ -1,0 +1,19 @@
+.Header {
+  width: 100vw;
+  height: 70px;
+  @extend %width-controller;
+  @extend %box-shadow--gray;
+
+  display: flex;
+  align-items: center;
+}
+
+.Header-title {
+  font-size: 2rem;
+}
+
+.Header-toggle {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}

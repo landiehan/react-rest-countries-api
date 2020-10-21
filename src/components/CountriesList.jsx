@@ -43,14 +43,17 @@ function CountryInfo(props) {
         src={props.flag} 
         alt={`flag of ${props.name}`}
       />
-      <h4>
-        {props.name}
-      </h4>
-      <ul>
-        <li>Population: {props.population}</li>
-        <li>Region: {props.region}</li>
-        <li>Capital: {props.capital}</li>
-      </ul>
+
+      <div className='Country-info'>
+        <h4>
+          {props.name}
+        </h4>
+        <ul>
+          <li><span className='Country-property'>Population: </span>{props.population}</li>
+          <li><span className='Country-property'>Region: </span>{props.region}</li>
+          <li><span className='Country-property'>Capital: </span>{props.capital}</li>
+        </ul>        
+      </div>
     </section>      
   )
 };

@@ -11,6 +11,9 @@ html {
 body {
   font-size: 1.6rem;
   font-family: $font-default;
+  color: $very-dark-blue;
+
+  background-color: $very-light-gray;
 }
 
 /**
@@ -18,4 +21,30 @@ body {
  */
 ul {
   list-style: none;
+}
+
+@mixin width-controller($offset) {
+  padding-left: $offset;
+  padding-right: $offset;
+}
+
+%width-controller {
+  @include width-controller(2rem);
+  @media screen and (min-width: $bp-small) {
+    @include width-controller(calc(2rem + 2vw));
+  }
+  @media screen and (min-width: $bp-medium) {
+    @include width-controller((calc(5rem + 2vw)));
+  }
+  @media screen and (min-width: $bp-large) {
+    @include width-controller((calc(10rem + 2vw)));
+  }
+}
+
+%box-shadow--gray {
+  box-shadow: 0 1px 5px 0px rgba(black, .1);
+}
+
+%rounded-box {
+  border-radius: 5px;
 }

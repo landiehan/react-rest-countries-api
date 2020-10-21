@@ -1,3 +1,38 @@
 .CountriesList {
+  margin-top: 3rem;
+  width: 100vw;
+  @extend %width-controller;
+
   display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 3rem;
+
+  @media screen and (min-width: $bp-medium) {
+    grid-template-columns: repeat(2, 300px);
+  }
+
+  @media screen and (min-width: $bp-large) {
+    grid-template-columns: repeat(4, 300px);
+  }
+}
+
+.Country {
+  @extend %box-shadow--gray;
+  @extend %rounded-box;
+  overflow: hidden;
+
+  img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  &-info {
+    padding: 2rem 2rem 3rem;
+  }
+
+  &-property {
+    font-weight: $font-semi-bold;
+  }
 }

@@ -1,0 +1,62 @@
+.SearchBar {
+  margin-top: 3rem;
+  width: 100vw;
+  @extend %width-controller;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media screen and (min-width: $bp-medium) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;    
+  }
+}
+
+.SearchBar-input {
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    color: $dark-gray;
+    @extend %rounded-box;
+    @extend %box-shadow--gray;
+  }
+
+  &-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 2rem;
+    path {
+      fill: $dark-gray;
+    }
+  }
+
+  min-width: 30rem;
+  padding: 1rem;
+  border: none;
+  font-family: inherit;
+  color: inherit;
+  font-weight: $font-semi-bold;
+}
+
+.SearchBar-select {
+  @media screen and (max-width: $bp-small) {
+    margin-top: 4rem; 
+    padding: 1rem;   
+  }
+  
+  border: none;
+  font-family: inherit;
+  font-weight: $font-semi-bold;
+  color: inherit;
+  padding: 0 1rem;
+  @extend %rounded-box;
+  @extend %box-shadow--gray;
+
+  option {
+    color: inherit;
+    font-family: $font-default;
+    font-weight: $font-light;
+  }
+}

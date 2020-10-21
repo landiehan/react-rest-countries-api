@@ -1,6 +1,7 @@
 import React from 'react';
-import CountriesList from './CountriesList';
+import Header from './Header';
 import SearchBar from './SearchBar';
+import CountriesList from './CountriesList';
 
 class FilterableCountriesList extends React.Component {
   constructor(props) {
@@ -36,9 +37,9 @@ class FilterableCountriesList extends React.Component {
   }
 
   render() {
-    console.log(this.state.selectedOption);
     return (
       <div className='FilterableCountriesList'>
+        <Header />
         <SearchBar
           onHandleFilterTextChange={this.onHandleFilterTextChange}
           onHandleSelectedOptionChange={this.onHandleSelectedOptionChange}
