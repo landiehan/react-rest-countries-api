@@ -42,15 +42,14 @@
 
 .SearchBar-select {
   @media screen and (max-width: $bp-small) {
-    margin-top: 4rem; 
-    padding: 1rem;   
+    margin-top: 4rem;   
   }
   
   border: none;
   font-family: inherit;
   font-weight: $font-semi-bold;
   color: inherit;
-  padding: 0 1rem;
+  padding: 1rem;
   @extend %rounded-box;
   @extend %box-shadow--gray;
 
