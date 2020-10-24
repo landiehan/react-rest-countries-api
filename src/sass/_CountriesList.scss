@@ -22,7 +22,7 @@
   @extend %rounded-box;
   overflow: hidden;
 
-  img {
+  &-flag {
     width: 300px;
     height: 200px;
     object-fit: cover;

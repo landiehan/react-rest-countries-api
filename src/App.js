@@ -1,10 +1,28 @@
 import React from 'react';
+import Header from './components/Header';
 import FilterableCountriesList from './components/FilterableCountriesList';
-import './sass/App.scss';
+import CountryDetail from './components/CountryDetail';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
 
 function App() {
   return (
-    <FilterableCountriesList />
+    <>
+      <Header />
+      <Router>
+        <Switch>
+          <Route exact path='/'>            
+            <FilterableCountriesList /> 
+          </Route>   
+          <Route path='/country/:countryName'>
+            <CountryDetail />
+          </Route>
+        </Switch>
+      </Router>
+    </>
   );
 }
 

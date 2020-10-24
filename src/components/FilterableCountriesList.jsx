@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from './Header';
 import SearchBar from './SearchBar';
 import CountriesList from './CountriesList';
 
@@ -38,8 +37,7 @@ class FilterableCountriesList extends React.Component {
 
   render() {
     return (
-      <div className='FilterableCountriesList'>
-        <Header />
+      <main className='Main'>
         <SearchBar
           onHandleFilterTextChange={this.onHandleFilterTextChange}
           onHandleSelectedOptionChange={this.onHandleSelectedOptionChange}
@@ -49,7 +47,7 @@ class FilterableCountriesList extends React.Component {
           selectedOption={this.state.selectedOption}
           filterText={this.state.filterText}
         />
-      </div>
+      </main>
     );
   }
 }
