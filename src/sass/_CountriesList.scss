@@ -8,8 +8,13 @@
   justify-items: center;
   gap: 3rem;
 
-  @media screen and (min-width: $bp-medium) {
+  @media screen and (min-width: $bp-small) {
     grid-template-columns: repeat(2, 300px);
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: $bp-medium) {
+    grid-template-columns: repeat(3, 300px);
   }
 
   @media screen and (min-width: $bp-large) {

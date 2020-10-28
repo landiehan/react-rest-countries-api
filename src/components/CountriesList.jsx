@@ -8,7 +8,7 @@ class CountriesList extends React.Component {
     const filterText = this.props.filterText;
     const selectedOption = this.props.selectedOption;
     
-    countries.forEach(country => {
+    countries.forEach((country, index) => {
       if (country.region.indexOf(selectedOption) === -1) {
         return;
       }    
@@ -19,7 +19,7 @@ class CountriesList extends React.Component {
 
       countriesList.push(
         <CountryInfo
-          key={country.id}
+          key={index}
           flag={country.flag}
           name={country.name}
           population={country.population}
