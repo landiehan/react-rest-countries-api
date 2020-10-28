@@ -6,14 +6,21 @@
 
 html {
   font-size: 62.5%;
+
+  color: $color-dark-blue-1000;
+  background-color: $color-gray-100;
+  --element-background-color: white;
+}
+
+html[theme='dark'] {
+  color: white;
+  background-color: $color-dark-blue-800;
+  --element-background-color: hsl(209, 23%, 22%);
 }
 
 body {
   font-size: 1.6rem;
   font-family: $font-default;
-  color: $very-dark-blue;
-
-  background-color: $very-light-gray;
 }
 
 /**

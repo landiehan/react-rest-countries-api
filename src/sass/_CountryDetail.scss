@@ -9,6 +9,8 @@
     padding: .5rem 2.5rem;
     @extend %box-shadow--gray;
     @extend %rounded-box;    
+
+    background-color: var(--element-background-color);
   }
 }
 
@@ -60,5 +62,7 @@
     @extend %box-shadow--gray;
     // @extend %rounded-box;
     border-radius: 2px;
+
+    background-color: var(--element-background-color);
   }
 }

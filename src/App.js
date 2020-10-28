@@ -8,22 +8,58 @@ import {
   Switch
 } from 'react-router-dom';
 
-function App() {
-  return (
-    <>
-      <Header />
-      <Router>
-        <Switch>
-          <Route exact path='/'>            
-            <FilterableCountriesList /> 
-          </Route>   
-          <Route path='/country/:countryName'>
-            <CountryDetail />
-          </Route>
-        </Switch>
-      </Router>
-    </>
-  );
+export const ThemeContext = React.createContext({
+  theme: 'light',
+  handleThemeChange: () => {}
+});
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.handleThemeChange = () => {
+      this.setState({
+        theme:
+          this.state.theme === 'light'
+            ? 'dark'
+            : 'light'
+      });
+    }    
+
+    this.state = {
+      theme: 'light',
+      handleThemeChange: this.handleThemeChange
+    };
+  }
+
+  componentDidMount() {
+    document.querySelector('html').setAttribute('theme', this.state.theme);
+  }
+
+  componentDidUpdate() {
+    document.querySelector('html').setAttribute('theme', this.state.theme);
+  }
+
+  render() {
+    return (
+      <>
+        <ThemeContext.Provider value={this.state}>
+          <Header/>  
+        </ThemeContext.Provider>
+        
+        <Router>
+          <Switch>
+            <Route exact path='/'>            
+              <FilterableCountriesList /> 
+            </Route>   
+            <Route path='/country/:countryName'>
+              <CountryDetail />
+            </Route>
+          </Switch>
+        </Router>
+      </>
+    );    
+  }
 }
 
 export default App;

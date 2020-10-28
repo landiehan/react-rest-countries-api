@@ -20,6 +20,7 @@
 .Country {
   @extend %box-shadow--gray;
   @extend %rounded-box;
+  background-color: var(--element-background-color);
   overflow: hidden;
 
   &-flag {
@@ -33,6 +34,6 @@
   }
 
   &-property {
-    font-weight: $font-semi-bold;
+    font-weight: $semi-bold;
   }
 }

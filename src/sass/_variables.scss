@@ -1,16 +1,16 @@
 // COLORS
-$dark-blue: hsl(209, 23%, 22%); // (Dark Mode Elements)
-$very-dark-blue: hsl(207, 26%, 17%); // (Dark Mode Background)
-$very-dark-blue: hsl(200, 15%, 8%); // (Light Mode Text)
-$dark-gray: hsl(0, 0%, 52%); // (Light Mode Input)
-$very-light-gray: hsl(0, 0%, 98%); // (Light Mode Background)
+$color-gray-100: hsl(0, 0%, 98%);
+$color-gray-500: hsl(0, 0%, 52%);
+$color-dark-blue-500: hsl(209, 23%, 22%);
+$color-dark-blue-800: hsl(207, 26%, 17%);
+$color-dark-blue-1000: hsl(200, 15%, 8%);
 
 // FONTS
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
 $font-default: 'Nunito Sans', sans-serif;
-$font-light: 300;
-$font-semi-bold: 600;
-$font-extra-bold: 800;
+$light: 300;
+$semi-bold: 600;
+$extra-bold: 800;
 
 // BREAKPOINTS
 $bp-small: 480px;
