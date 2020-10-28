@@ -50,7 +50,7 @@ function CountryDetail() {
             <CountryDetailItem property='Native Name' value={country.nativeName} />
             <CountryDetailItem property='Population' value={country.population} />
             <CountryDetailItem property='Region' value={country.region} />
-            <CountryDetailItem property='Sub Region' value={country.subregion} />
+            <CountryDetailItem property='Sub Region' value={country.subRegion} />
             <CountryDetailItem property='Capital' value={country.capital} />
             <CountryDetailItem property='Top Level Domain' value={country.topLevelDomain} />
             {country.currencies ? <CountryDetailItem property='Currencies' value={MapNameAndJoin(country.currencies)} /> : ''}
