@@ -7,7 +7,7 @@
   grid-template-columns: 1fr;
   justify-items: center;
   gap: 3rem;
-
+  
   @media screen and (min-width: $bp-small) {
     grid-template-columns: repeat(2, 300px);
   }
